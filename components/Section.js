@@ -21,14 +21,14 @@ const Section = ({ header, text, buttonL, buttonR, showIcon, bgImage }) => {
           <p className='text-sm underline text-center pt-2'>{text}</p>
         </div>
         {/* Section buttons */}
-        <div className='flex flex-col md:flex-row items-center justify-center w-full px-20 md:space-y-0 md:space-x-10 space-y-5 transition'>
+        <div className='flex flex-col md:flex-row items-center justify-center w-full px-20 md:space-y-0 md:space-x-10 space-y-5'>
           {buttonL && (
-            <button className='bg-gray-900 opacity-90 p-3 text-center text-white md:max-w-sm w-full rounded'>
+            <button className='main-btn bg-gray-900 opacity-90 p-3 text-center text-white md:max-w-sm w-full rounded'>
               {buttonL}
             </button>
           )}
           {buttonR && (
-            <button className='bg-gray-200 opacity-90 p-3 text-center text-slate-900 md:max-w-sm w-full rounded'>
+            <button className='main-btn bg-gray-200 opacity-90 p-3 text-center text-slate-900 md:max-w-sm w-full rounded'>
               {buttonR}
             </button>
           )}
@@ -40,7 +40,7 @@ const Section = ({ header, text, buttonL, buttonR, showIcon, bgImage }) => {
           showIcon ? '' : 'hidden'
         } absolute bottom-4 left-1/2 -translate-x-1/2`}
       >
-        <ChevronDownIcon className='h-7 w-7 cursor-pointer animate-bounce text-white' />
+        <ChevronDownIcon className='icon animate-bounce text-white' />
       </i>
     </div>
   );

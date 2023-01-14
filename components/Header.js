@@ -48,7 +48,7 @@ const Header = () => {
         <div
           className={`${
             !showSidebar ? 'translate-x-full' : 'translate-x-0'
-          } fixed bg-white flex flex-col px-8 py-4 top-0 bottom-0 right-0 w-1/4 transition z-20`}
+          } fixed bg-white flex flex-col px-8 py-4 top-0 bottom-0 right-0 w-3/5 transition z-20`}
         >
           <div className='self-end'>
             <i onClick={() => setShowSidebar(false)}>
