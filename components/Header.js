@@ -31,6 +31,16 @@ const Header = () => {
         <button className='rounded bg-slate-100 text-slate-900 font-semibold opacity-75 px-3 py-1'>
           Menu
         </button>
+        {/* Sidebar */}
+        <div
+          className={`${
+            !showSidebar ? 'translate-x-full' : 'translate-x-0'
+          } fixed bg-white flex flex-col px-8 py-4 top-0 bottom-0 right-0 w-1/4 transition z-20`}
+        >
+          <div className='self-end'>
+            <i></i>
+          </div>
+        </div>
       </nav>
     </header>
   );
