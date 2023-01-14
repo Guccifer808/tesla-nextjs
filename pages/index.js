@@ -7,7 +7,7 @@ import { useRecoilState } from 'recoil';
 export default function Home() {
   const [showSidebar, setShowSidebar] = useRecoilState(menuSidebarAtom);
   return (
-    <div className='w-full h-full '>
+    <div className='w-full h-full'>
       <Header />
       {/* FIX OVERFLOW  */}
       <div
