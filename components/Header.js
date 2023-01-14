@@ -1,8 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRecoilState } from 'recoil';
+import { menuSidebarAtom } from '../atoms/menuSidebarAtom';
 
 const Header = () => {
+  //state for sidebar navigation w recoil state hook with our atom state
+  const [showSidebar, setShowSidebar] = useRecoilState(menuSidebarAtom);
+
   return (
     <header className='fixed top-0 bg-transparent w-full z-10'>
       <nav className='flex items-center justify-between w-full px-5 py-4'>
