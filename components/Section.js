@@ -18,7 +18,7 @@ const Section = ({ header, text, buttonL, buttonR, showIcon, bgImage }) => {
       <div className='flex flex-col justify-between items-center pt-32 pb-32 h-full z-20'>
         <div className=''>
           <h1 className='text-5xl font-semibold text-center'>{header}</h1>
-          <p className='text-sm underline text-center pt-2'>{text}</p>
+          <p className='text-sm underline text-center pt-3'>{text}</p>
         </div>
         {/* Section buttons */}
         <div className='flex flex-col md:flex-row items-center justify-center w-full px-20 md:space-y-0 md:space-x-10 space-y-5'>
