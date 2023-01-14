@@ -1,3 +1,9 @@
+import Header from 'components/Header';
+
 export default function Home() {
-  return <div className='text-red-500 text-2xl'>TEST</div>;
+  return (
+    <div className='w-full h-screen'>
+      <Header />
+    </div>
+  );
 }
