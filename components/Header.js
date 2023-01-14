@@ -5,6 +5,7 @@ import { useRecoilState } from 'recoil';
 import { menuSidebarAtom } from '../atoms/menuSidebarAtom';
 
 import { XMarkIcon } from '@heroicons/react/24/solid';
+import { links } from 'constants/links';
 
 const Header = () => {
   //state for sidebar navigation w recoil state hook with our atom state
@@ -25,11 +26,16 @@ const Header = () => {
         </Link>
         {/* Navbar items */}
         <div className='hidden space-x-5 md:flex md:items-center'>
-          <Link href='/main'>MODEL S</Link>
-          <Link href='/main'>MODEL 3</Link>
-          <Link href='/main'>MODEL X</Link>
-          <Link href='/main'>MODEL Y</Link>
-          <Link href='/main'>Powerwall</Link>
+          {/* Mapping external links.js */}
+          {links.map((link) => (
+            <Link
+              key={link.name}
+              href={link.path}
+              className='text-gray-700 px-1'
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
         {/* Menu button */}
         <button
@@ -51,18 +57,16 @@ const Header = () => {
           </div>
           {/* Sidebar links */}
           <div className='flex flex-col space-y-5 pt-10'>
-            <Link href='/' className='px-1 text-gray-700'>
-              MODEL S
-            </Link>
-            <Link href='/' className='px-1 text-gray-700'>
-              MODEL 3
-            </Link>
-            <Link href='/' className='px-1 text-gray-700'>
-              MODEL X
-            </Link>
-            <Link href='/' className='px-1 text-gray-700'>
-              MODEL Y
-            </Link>
+            {/* Mapping external links.js */}
+            {links.map((link) => (
+              <Link
+                key={link.name}
+                href={link.path}
+                className='text-gray-700 px-1'
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
         </div>
       </nav>
